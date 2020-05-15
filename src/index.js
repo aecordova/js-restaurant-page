@@ -1,8 +1,7 @@
-import createHeader from './header.js';
+import createHeader from './js/header.js';
 import logo from './img/logo.png';
+import './css/style.css';
 
+const header = createHeader(logo, 'Delizia Restaurant', { Bookings: '#', Contact: '#', About: '#' });
 
-document.body.insertBefore(createHeader(logo), document.body.firstChild);
-console.log('source',logo.path);
-
-
+document.body.insertBefore(header, document.body.firstChild);
