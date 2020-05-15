@@ -1,2 +1,8 @@
 import createHeader from './header.js';
-  document.body.insertBefore(createHeader(), document.body.firstChild);
+import logo from './img/logo.png';
+
+
+document.body.insertBefore(createHeader(logo), document.body.firstChild);
+console.log('source',logo.path);
+
+
