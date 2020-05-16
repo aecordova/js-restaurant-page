@@ -1,42 +1,21 @@
-
-body{
-  display: grid;
-  grid-template-columns: 10% 1fr 10%;
-  background-color: black ;
-  color: white;
-}
-
-#content{
-  grid-column: 1 / -1;
-  background-size: cover;
-  background-position: 0 -280px;
-  background-repeat: no-repeat;
-  padding: 20px;
-}
-
-h1 {
-  padding-top: 20px;
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 0;
-}
-
 p{
-  line-height: 1.5rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
   text-align: justify;
   height: 50vh;
-  width: 60%;
+  width: 80%;
   padding: 15px;
 }
+
 .section-box{
   display: grid;
   justify-items: center;
   align-items: center;
-  width: 80%;
+  width: 85%;
   border-radius: 25px;
   margin: 0 auto;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .7);
 }
 
 header {

@@ -1,4 +1,4 @@
-// import '../css/header.css';
+import '../css/header.css';
 
 export default function Header(logoImg, name, menuLinks) {
   const header = document.createElement('header');
