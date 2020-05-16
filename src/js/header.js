@@ -1,4 +1,6 @@
-export default function createHeader(logoImg, name, menuLinks) {
+// import '../css/header.css';
+
+export default function Header(logoImg, name, menuLinks) {
   const header = document.createElement('header');
   const brandBox = document.createElement('div');
   const brandLogo = new Image();
@@ -31,7 +33,6 @@ export default function createHeader(logoImg, name, menuLinks) {
   navBar.appendChild(navMenu);
   header.appendChild(brandBox);
   header.appendChild(navBar);
-
 
   return header;
 }

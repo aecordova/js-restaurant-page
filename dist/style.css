@@ -1,0 +1,78 @@
+
+body{
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  background-color: black ;
+  color: white;
+}
+
+#content{
+  grid-column: 1 / -1;
+  background-size: cover;
+  background-position: 0 -280px;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+h1 {
+  padding-top: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+p{
+  line-height: 1.5rem;
+  text-align: justify;
+  height: 50vh;
+  width: 60%;
+  padding: 15px;
+}
+.section-box{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  border-radius: 25px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 10% repeat(3, 1fr) 10%;
+}
+
+.brand-box{
+  grid-column: 2 / 4;
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 2rem;
+}
+
+.brand-logo {
+  height: 70px;
+  padding: 0 10px;
+}
+
+.nav-bar{
+  grid-column: 4/5;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item{
+  padding: 15px;
+  text-decoration: none;
+  color: inherit;
+}
