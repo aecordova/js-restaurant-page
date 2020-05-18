@@ -13,12 +13,17 @@ header {
 }
 
 .brand-name {
-  font-size: 2rem;
+  padding: 0;
+  line-height: 70px;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  font-family: 'Clicker', cursive;
 }
 
 .brand-logo {
-  height: 70px;
-  padding: 0 10px;
+  height: 80px;
+  padding: 0 5px;
 }
 
 .nav-bar{

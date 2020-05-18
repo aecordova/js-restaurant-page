@@ -4,7 +4,7 @@ export default function Header(logoImg, name, menuLinks) {
   const header = document.createElement('header');
   const brandBox = document.createElement('div');
   const brandLogo = new Image();
-  const brandName = document.createElement('span');
+  const brandName = document.createElement('h1');
   const navBar = document.createElement('nav');
   const navMenu = document.createElement('ul');
 

@@ -11,7 +11,7 @@ sectionBox.classList.add('section-box');
 content.appendChild(sectionBox);
 content.style.backgroundImage = `url(${backGnd})`;
 
-const header = Header(logo, 'Delizia Restaurant', { About: '#', Menu: '#', Contact: '#' });
+const header = Header(logo, 'Delicious', { About: '#', Menu: '#', Contact: '#' });
 const about = About();
 sectionBox.appendChild(about);
 // const menu = Menu();
