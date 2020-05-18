@@ -20,10 +20,14 @@ body{
   grid-template-rows: 100px;
   background-color: black ;
   color: white;
-	font-family: 'Garamond';
+  font-family: 'Garamond';
+  background-image: url('../img/main-back.jpg');
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
-h1 {
+h1{
   padding-top: 20px;
   font-size: 2.5rem;
   text-align: center;
@@ -33,10 +37,7 @@ h1 {
 
 #content{
   grid-column: 1 / -1;
-  background-size: cover;
-  background-position: 0 -280px;
-  background-repeat: no-repeat;
-  padding: 20px;
+  padding: 10px;
 }
 
 .section-box{

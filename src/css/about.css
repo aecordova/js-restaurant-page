@@ -1,8 +1,12 @@
 .about-body {
-  line-height: 2rem;
-  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
   text-align: justify;
   width: 80%;
+  margin: 0 auto;
+  padding-bottom: 25px;
 }
 
-
+.about-title{
+  padding-bottom: 35px;
+}

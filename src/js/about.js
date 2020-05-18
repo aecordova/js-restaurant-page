@@ -1,4 +1,4 @@
-import '../css/about.css'
+import '../css/about.css';
 
 export default function Section(titleText, bodyText) {
   const title = document.createElement('h1');
@@ -7,6 +7,7 @@ export default function Section(titleText, bodyText) {
 
   title.innerHTML = titleText;
   body.innerHTML = bodyText;
+  title.classList.add('about-title');
   body.classList.add('about-body');
 
   container.appendChild(title);
