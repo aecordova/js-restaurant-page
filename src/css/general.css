@@ -21,10 +21,7 @@ body{
   background-color: black ;
   color: white;
   font-family: 'Garamond';
-  background-image: url('../img/main-back.jpg');
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  background: url('../img/main-back.jpg') 0 0 / cover no-repeat fixed;
 }
 
 h1{
