@@ -1,3 +1,6 @@
+@import './about.css';
+@import './header.css';
+
 @font-face {
 	font-family: 'Clicker';
 	src: url("../fonts/ClickerScript-Regular.ttf") format("truetype");

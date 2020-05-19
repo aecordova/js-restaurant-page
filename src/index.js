@@ -1,6 +1,12 @@
-// import * as  from './content';
-// import './css/general.css';
+import sections from './js/pageSections';
+import './css/general.css';
 
-// document.body.insertBefore(header, document.body.firstChild);
-// document.body.appendChild(content);
-// content.appendChild(sectionBox);
+
+const content = sections().contentBox;
+const section = sections().sectionBox;
+
+document.body.appendChild(sections().header);
+document.body.appendChild(content);
+content.appendChild(section);
+
+// content.appendChild(section);

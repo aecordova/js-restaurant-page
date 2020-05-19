@@ -1,13 +1,12 @@
-
 header {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 10% repeat(3, 1fr) 10%;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, 0.9);
   margin-top: 10px;
 }
 
-.brand-box{
+.brand-box {
   grid-column: 2 / 4;
   display: flex;
   align-items: center;
@@ -19,7 +18,7 @@ header {
   font-size: 3rem;
   text-align: center;
   margin: 0;
-  font-family: 'Clicker', cursive;
+  font-family: "Clicker", cursive;
 }
 
 .brand-logo {
@@ -27,18 +26,18 @@ header {
   padding: 0 5px;
 }
 
-.nav-bar{
+.nav-bar {
   grid-column: 4/5;
 }
 
-.nav-menu{
+.nav-menu {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   padding: 0;
 }
 
-.menu-item{
+.nav-menu-item {
   padding: 15px;
   text-decoration: none;
   color: inherit;
