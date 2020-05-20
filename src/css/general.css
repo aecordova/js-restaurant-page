@@ -1,5 +1,6 @@
 @import './about.css';
 @import './header.css';
+@import './menu.css';
 
 @font-face {
 	font-family: 'Clicker';
@@ -48,8 +49,6 @@ a{
 .section-box{
   display: grid;
   justify-items: center;
-  align-items: center;
-  grid-template-rows: 30% 1fr;
   width: 85%;
   border-radius: 25px;
   margin: 0 auto;
