@@ -14,6 +14,8 @@ const Section = (titleContent, bodyContent, type = 'div') => {
   container.appendChild(title);
   container.appendChild(body);
 
+  container.classList.add('hidden');
+
   return container;
 };
 
@@ -71,27 +73,26 @@ const SectionBox = () => {
 
 const Header = (logoImg, name, menuLinks) => {
   const header = document.createElement('header');
-  const brandBox = document.createElement('div');
+  const brandBox = document.createElement('a');
+  brandBox.href='#';
   const brandLogo = new Image();
   const brandName = document.createElement('h1');
   const navBar = document.createElement('nav');
-  const navMenu = document.createElement('ul');
 
   Object.keys(menuLinks).forEach(item => {
     const menuItem = document.createElement('a');
-    const caption = document.createElement('li');
-    caption.innerHTML = item.toString();
+    menuItem.innerHTML = item.toString();
     menuItem.classList.add('nav-menu-item');
     menuItem.href = menuLinks[item];
-    menuItem.appendChild(caption);
-    navMenu.appendChild(menuItem);
+    menuItem.dataset.section = item.toString().toLowerCase();
+    
+    navBar.appendChild(menuItem);
   });
 
-  brandBox.classList.add('brand-box');
+  brandBox.classList.add('brand-box','nav-menu-item');
   brandName.classList.add('brand-name');
   brandLogo.classList.add('brand-logo');
   navBar.classList.add('nav');
-  navMenu.classList.add('nav-menu');
 
   brandName.innerHTML = name;
   brandLogo.src = logoImg;
@@ -99,7 +100,6 @@ const Header = (logoImg, name, menuLinks) => {
 
   brandBox.appendChild(brandLogo);
   brandBox.appendChild(brandName);
-  navBar.appendChild(navMenu);
   header.appendChild(brandBox);
   header.appendChild(navBar);
 
@@ -109,11 +109,10 @@ const Header = (logoImg, name, menuLinks) => {
 export default function PageSections() {
   const contentBox = ContentBox();
   const sectionBox = SectionBox();
-  const about = Section(cont.sections.about.title, cont.sections.about.body, 'p');
-  const menu = Section(cont.sections.menu.title, Menu(cont.sections.menu.menuItems));
+  const about = Section(cont.sections.about.title,''); //cont.sections.about.body
+  const menu = Section(cont.sections.menu.title, ''); //Menu(cont.sections.menu.menuItems)
   const contact = Section(cont.sections.contact.title, '');
   const header = Header(cont.header.brandLogo, cont.header.brandName, cont.header.menuOptions);
-
   return {
     header, about, menu, contact, contentBox, sectionBox,
   };
