@@ -4,7 +4,7 @@ const Section = (titleContent, bodyContent, type = 'div') => {
   const title = document.createElement('h1');
   const container = document.createElement('div');
   let body;
-  
+
   title.innerHTML = titleContent;
 
   if (typeof bodyContent === 'object') {
@@ -13,7 +13,6 @@ const Section = (titleContent, bodyContent, type = 'div') => {
     body = document.createElement(type);
     body.innerHTML = bodyContent;
   }
-  
 
   title.classList.add('section-title');
   body.classList.add('section-body');
@@ -112,12 +111,61 @@ const Header = (logoImg, name, menuLinks) => {
   return header;
 };
 
+const ContactForm = () => {
+  const cForm = document.createElement('form');
+  const name = document.createElement('input');
+  const nameLbl = document.createElement('label');
+  const email = document.createElement('input');
+  const emailLbl = document.createElement('label');
+  const comments = document.createElement('textarea');
+  const commentsLbl = document.createElement('label');
+  const submit = document.createElement('input');
+
+  const inputGrp = (...elements) => {
+    const iGrp = document.createElement('div');
+    iGrp.classList.add('input-group');
+    elements.forEach(e => iGrp.appendChild(e));
+    return iGrp;
+  };
+
+  name.type = 'text';
+  email.type = 'email';
+  submit.type = 'submit';
+
+  name.id = 'name-input';
+  email.id = 'email-input';
+  comments.id = 'comments-input';
+
+  nameLbl.htmlFor = name.id;
+  emailLbl.htmlFor = email.id;
+  commentsLbl.htmlFor = comments.id;
+
+  nameLbl.innerHTML = 'Name:';
+  emailLbl.innerHTML = 'Email:';
+  commentsLbl.innerHTML = 'Comments:';
+
+  cForm.appendChild(inputGrp(nameLbl, name));
+  cForm.appendChild(inputGrp(emailLbl, email));
+  cForm.appendChild(inputGrp(commentsLbl, comments));
+  cForm.appendChild(submit);
+
+  return cForm;
+};
+
 export default function PageSections() {
   const contentBox = ContentBox();
   const sectionBox = SectionBox();
   const about = Section(cont.sections.about.title, cont.sections.about.body); //
   const menu = Section(cont.sections.menu.title, Menu(cont.sections.menu.menuItems));
-  const contact = Section(cont.sections.contact.title, '');
+  const contact = Section(cont.sections.contact.title, (() => {
+    const contactInfo = document.createElement('div');
+    contactInfo.innerHTML = 'This is the message I want to display in contact info';
+    const container = document.createElement('div');
+    container.classList.add('contact');
+    container.appendChild(contactInfo);
+    container.appendChild(ContactForm());
+    return container; 
+  })());
   const header = Header(cont.header.brandLogo, cont.header.brandName, cont.header.menuOptions);
   return {
     header, about, menu, contact, contentBox, sectionBox,
