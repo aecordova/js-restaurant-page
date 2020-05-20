@@ -159,7 +159,7 @@ export default function PageSections() {
   const menu = Section(cont.sections.menu.title, Menu(cont.sections.menu.menuItems));
   const contact = Section(cont.sections.contact.title, (() => {
     const contactInfo = document.createElement('div');
-    contactInfo.innerHTML = 'This is the message I want to display in contact info';
+    contactInfo.innerHTML = cont.sections.contact.body;
     const container = document.createElement('div');
     container.classList.add('contact');
     container.appendChild(contactInfo);
