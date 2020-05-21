@@ -1,0 +1,18 @@
+
+.cover{
+  display: grid;
+}
+
+.cover-brand-name{
+  font-size: 7em;
+}
+
+.cover-brand-box {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.cover-welcome{
+  text-align: center;
+}

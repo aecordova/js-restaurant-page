@@ -25,6 +25,31 @@ const Section = (titleContent, bodyContent, type = 'div') => {
   return container;
 };
 
+const Cover = (logo, brand, welcomeMsg) => {
+  const container = document.createElement('div');
+  const brandLogo = new Image();
+  const brandName = document.createElement('h1');
+  const brandBox = document.createElement('div');
+  const welcome = document.createElement('h2');
+
+  brandLogo.src = logo;
+  brandName.innerHTML = brand;
+  welcome.innerHTML = welcomeMsg;
+
+  brandLogo.classList.add('cover-brand-logo');
+  brandName.classList.add('cover-brand-name');
+  brandBox.classList.add('cover-brand-box');
+  welcome.classList.add('cover-welcome');
+  container.classList.add('cover');
+
+  brandBox.appendChild(brandLogo);
+  brandBox.appendChild(brandName);
+  container.appendChild(brandBox);
+  container.appendChild(welcome);
+
+  return container;
+};
+
 const Menu = (menuItems) => {
   const menu = document.createElement('div');
   menu.classList.add('menu');
@@ -79,7 +104,7 @@ const SectionBox = () => {
 const Header = (logoImg, name, menuLinks) => {
   const header = document.createElement('header');
   const brandBox = document.createElement('a');
-  brandBox.href='#';
+  brandBox.href = '#';
   const brandLogo = new Image();
   const brandName = document.createElement('h1');
   const navBar = document.createElement('nav');
@@ -90,11 +115,11 @@ const Header = (logoImg, name, menuLinks) => {
     menuItem.classList.add('nav-menu-item');
     menuItem.href = menuLinks[item];
     menuItem.dataset.section = item.toString().toLowerCase();
-    
+
     navBar.appendChild(menuItem);
   });
 
-  brandBox.classList.add('brand-box','nav-menu-item');
+  brandBox.classList.add('brand-box', 'nav-menu-item');
   brandName.classList.add('brand-name');
   brandLogo.classList.add('brand-logo');
   navBar.classList.add('nav');
@@ -155,6 +180,7 @@ const ContactForm = () => {
 export default function PageSections() {
   const contentBox = ContentBox();
   const sectionBox = SectionBox();
+  const cover = Cover(cont.header.brandLogo, cont.header.brandName, cont.header.welcome);
   const about = Section(cont.sections.about.title, cont.sections.about.body); //
   const menu = Section(cont.sections.menu.title, Menu(cont.sections.menu.menuItems));
   const contact = Section(cont.sections.contact.title, (() => {
@@ -164,10 +190,10 @@ export default function PageSections() {
     container.classList.add('contact');
     container.appendChild(contactInfo);
     container.appendChild(ContactForm());
-    return container; 
+    return container;
   })());
   const header = Header(cont.header.brandLogo, cont.header.brandName, cont.header.menuOptions);
   return {
-    header, about, menu, contact, contentBox, sectionBox,
+    cover, header, about, menu, contact, contentBox, sectionBox,
   };
 }

@@ -4,43 +4,8 @@ import './css/general.css';
 const content = sections().contentBox;
 const section = sections().sectionBox;
 const {
-  header, about, menu, contact,
+  cover, header, about, menu, contact,
 } = sections();
-
-document.body.appendChild(header);
-document.body.appendChild(content);
-content.appendChild(section);
-section.appendChild(about);
-section.appendChild(menu);
-section.appendChild(contact);
-
-document.querySelectorAll('.nav-menu-item').forEach((navItem) => {
-  const sectionToDisplay = navItem.dataset.section;
-  navItem.addEventListener('click', () => {
-    toggleSection(sectionToDisplay);
-  });
-});
-
-const toggleSection = (sectionToDisplay) => {
-  switch (sectionToDisplay) {
-    case 'menu':
-      hide(about, contact);
-      show(menu);
-      break;
-    case 'about':
-      hide(menu, contact);
-      show(about);
-      break;
-    case 'contact':
-      hide(about, menu);
-      show(contact);
-      break;
-    default:
-      hide(about, menu);
-      show(contact);
-      break;
-  }
-};
 
 const hide = (...elements) => {
   elements.forEach((e) => {
@@ -64,3 +29,40 @@ const show = (...elements) => {
   });
 };
 
+
+const toggleSection = (sectionToDisplay) => {
+  switch (sectionToDisplay) {
+    case 'menu':
+      hide(cover,about, contact);
+      show(menu);
+      break;
+    case 'about':
+      hide(cover, menu, contact);
+      show(about);
+      break;
+    case 'contact':
+      hide(cover, about, menu);
+      show(contact);
+      break;
+    default:
+      hide(contact, about, menu);
+      show(cover);
+      break;
+  }
+};
+
+
+document.body.appendChild(header);
+document.body.appendChild(content);
+content.appendChild(section);
+section.appendChild(cover);
+section.appendChild(about);
+section.appendChild(menu);
+section.appendChild(contact);
+
+document.querySelectorAll('.nav-menu-item').forEach((navItem) => {
+  const sectionToDisplay = navItem.dataset.section;
+  navItem.addEventListener('click', () => {
+    toggleSection(sectionToDisplay);
+  });
+});

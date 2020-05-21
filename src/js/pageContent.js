@@ -1,7 +1,5 @@
 import logo from '../img/logo.png';
 
-let phone;
-
 const PageContent = {
   header: {
     brandLogo: logo,
@@ -11,6 +9,7 @@ const PageContent = {
       Menu: '#',
       Contact: '#',
     },
+    welcome: 'Love Food?... <br>This is the Right place!',
   },
   sections: {
     about: {
@@ -54,11 +53,9 @@ const PageContent = {
       email: 'contact@deliciousrestaurant.com',
       twitter: '@delicious-restaurant',
       facebook: 'facebook.com/delicious_restautant',
-      body: `<h2 class='opinion'>Your opinion is very important to us!</h2> If you have any question or concern, please give us a call, send us an email, visit our social media or leave us a message in this form!<h2 class ='hear'>We want to hear from you!</h2>`,
+      body: '<h2 class=\'opinion\'>Your opinion is very important to us!</h2> If you have any question or concern, please give us a call, send us an email, visit our social media or leave us a message in this form!<h2 class =\'hear\'>We want to hear from you!</h2>',
     },
   },
 };
-
-phone = PageContent.sections.contact.phone;
 
 export default PageContent;
