@@ -33,7 +33,7 @@ const show = (...elements) => {
 const toggleSection = (sectionToDisplay) => {
   switch (sectionToDisplay) {
     case 'menu':
-      hide(cover,about, contact);
+      hide(cover, about, contact);
       show(menu);
       break;
     case 'about':
