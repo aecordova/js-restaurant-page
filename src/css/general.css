@@ -23,7 +23,7 @@ body, html{
 
 body{
   display: grid;
-  /* grid-template-rows: 110px; */
+  grid-template-rows: 110px;
   background-color: black ;
   font-family: 'Garamond';
   background: url('../img/main-back.jpg') 0 0px / cover no-repeat fixed;
@@ -42,7 +42,7 @@ a{
 .section-box{
   display: grid;
   justify-items: center;
-  /* width: 85%; */
+  align-items: center;
   border-radius: 25px;
   margin: 0 auto;
   height: 100%;

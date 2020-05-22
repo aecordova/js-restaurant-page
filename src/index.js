@@ -30,7 +30,6 @@ const show = (...elements) => {
 };
 
 
-
 document.body.appendChild(header);
 document.body.appendChild(content);
 content.appendChild(section);
@@ -40,7 +39,6 @@ section.appendChild(menu);
 section.appendChild(contact);
 
 const headerBrand = document.querySelector('.brand-box');
-console.log(headerBrand);
 
 const toggleSection = (sectionToDisplay) => {
   switch (sectionToDisplay) {
