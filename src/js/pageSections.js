@@ -161,6 +161,8 @@ const ContactForm = () => {
   email.id = 'email-input';
   comments.id = 'comments-input';
 
+  submit.value = 'Send';
+
   nameLbl.htmlFor = name.id;
   emailLbl.htmlFor = email.id;
   commentsLbl.htmlFor = comments.id;
