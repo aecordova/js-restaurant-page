@@ -119,7 +119,7 @@ const Header = (logoImg, name, menuLinks) => {
     navBar.appendChild(menuItem);
   });
 
-  brandBox.classList.add('brand-box', 'nav-menu-item');
+  brandBox.classList.add('brand-box', 'nav-menu-item', 'hidden');
   brandName.classList.add('brand-name');
   brandLogo.classList.add('brand-logo');
   navBar.classList.add('nav');

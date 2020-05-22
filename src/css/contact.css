@@ -1,6 +1,6 @@
 .contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 20px;
 }
 
@@ -69,6 +69,6 @@ label{
   padding-bottom: 5px;
 }
 
-.hear{
+/* .hear{
   text-align: right;
-}
+} */

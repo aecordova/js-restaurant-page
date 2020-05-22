@@ -18,24 +18,15 @@ body, html{
   height: 100%;
   width: 100%;
   margin: 0  !important;
+  color: #fff;
 }
 
 body{
   display: grid;
-  grid-template-columns: 10% 1fr 10%;
-  grid-template-rows: 100px;
+  /* grid-template-rows: 110px; */
   background-color: black ;
-  color: white;
   font-family: 'Garamond';
-  background: url('../img/main-back.jpg') 0 0 / cover no-repeat fixed;
-}
-
-h1{
-  padding-top: 20px;
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 0;
-  font-family: 'Clicker', cursive;
+  background: url('../img/main-back.jpg') 0 0px / cover no-repeat fixed;
 }
 
 a{
@@ -51,11 +42,28 @@ a{
 .section-box{
   display: grid;
   justify-items: center;
-  width: 85%;
+  /* width: 85%; */
   border-radius: 25px;
   margin: 0 auto;
   height: 100%;
   background-color: rgba(0, 0, 0, .7);
+}
+
+.section-body {
+  line-height: 1em;
+  font-size: 1em;
+  text-align: justify;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+h1{
+  padding-top: 20px;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  font-family: 'Clicker', cursive;
 }
 
 .vis-hidden{

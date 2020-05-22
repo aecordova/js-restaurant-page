@@ -4,15 +4,18 @@
 }
 
 .cover-brand-name{
-  font-size: 7em;
+  font-size: 3em;
+  padding: 0;
 }
 
 .cover-brand-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-top: 25px;
 }
 
 .cover-welcome{
   text-align: center;
+  margin: .5em;
 }
