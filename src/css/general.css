@@ -1,0 +1,82 @@
+@import './about.css';
+@import './header.css';
+@import './menu.css';
+@import './contact.css';
+@import './cover.css';
+
+@font-face {
+	font-family: 'Clicker';
+	src: url("../fonts/ClickerScript-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Garamond';
+	src: url("../fonts/EBGaramond-Regular.ttf") format("truetype");
+}
+
+body, html{
+  height: 100%;
+  width: 100%;
+  margin: 0  !important;
+  color: #fff;
+}
+
+body{
+  display: grid;
+  grid-template-rows: 110px;
+  background-color: black ;
+  font-family: 'Garamond';
+  background: url('../img/main-back.jpg') 0 0px / cover no-repeat fixed;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#content{
+  grid-column: 1 / -1;
+  padding: 10px;
+}
+
+.section-box{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 25px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.section-body {
+  line-height: 1em;
+  font-size: 1em;
+  text-align: justify;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+h1{
+  padding-top: 20px;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  font-family: 'Clicker', cursive;
+}
+
+.vis-hidden{
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.hidden{
+  display: none;
+}
+
+.visible{
+  opacity: 1 !important;
+  transition: opacity .2s ease;
+}
+

@@ -1,0 +1,54 @@
+header {
+  grid-column: 1 / -1;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 10px;
+}
+
+.brand-box {
+  grid-column: 1 / -1;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  padding: 5px 5px 5px 5px;
+}
+
+.brand-name {
+  padding: 0;
+  line-height: 50px;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  font-family: "Clicker", cursive;
+}
+
+.brand-logo {
+  height: 2.5rem;
+  /* padding: 0 5px; */
+}
+
+.nav {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+  width: 100%;
+  /* display: none; */
+}
+
+nav .nav-menu-item {
+  border-radius: 5%;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+
+nav .nav-menu-item:hover{
+  -webkit-box-shadow: inset 0px 0px 27px 13px rgba(5,5,5,1);
+  -moz-box-shadow: inset 0px 0px 27px 13px rgba(5,5,5,1);
+  box-shadow: inset 0px 0px 27px 13px rgba(5,5,5,1);
+  background-color: rgba(255, 255, 255, .5);
+}

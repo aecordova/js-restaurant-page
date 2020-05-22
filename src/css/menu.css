@@ -1,0 +1,31 @@
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+}
+
+.menu-item-desc{
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.2rem;
+  margin-top: .5rem;
+}
+
+.menu-item-top{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.menu-item-price::before{
+  content: '$ ';
+  font-size: smaller;
+}
+
+.menu-category{
+  grid-column: 1 / -1;
+  font-size: 1.2rem;
+  margin: 0;
+}
